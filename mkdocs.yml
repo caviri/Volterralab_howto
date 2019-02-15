@@ -1,0 +1,13 @@
+site_name: Volterra Dry Lab Guide
+theme: cinder
+site_author: vivar
+repo_url: "https://wwwfbm.unil.ch/dnf/group/glia-an-active-synaptic-partner/member/volterra-andrea-volterra"
+use_directory_urls: false
+site_description: Documentation of Volterra Lab
+copyright: "This documentation is for exclusive use of Volterra Laboratory members use at DNF-UNIL. In case you find useful for others labs and you want to share first contact carlos.vivarrios@unil.ch"
+pages:
+    - Home: index.md
+    - "Computing": servers.md
+    - "Software": software.md
+    - "Analysis": analysis.md
+    - "F.A.Q.": faq.md

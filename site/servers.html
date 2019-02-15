@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Documentation of Volterra Lab"> 
+    <meta name="author" content="vivar"> 
+    <link rel="shortcut icon" href="./img/favicon.ico">
+
+    <title>Computing - Volterra Dry Lab Guide</title>
+
+    <link href="./css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/2.018/css/hack.min.css">
+    <link href='//fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="./css/base.css" rel="stylesheet">
+    <link href="./css/cinder.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/highlight.css">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+    <script>
+    WebFont.load({
+        google: {
+            families: ['Open Sans', 'PT Sans']
+        }
+    });
+    </script>
+
+    
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            <a class="navbar-brand" href="index.html">Volterra Dry Lab Guide</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="index.html">Home</a>
+                    </li>
+                
+                
+                
+                    <li class="active">
+                        <a href="servers.html">Computing</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="software.html">Software</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="faq.html">F.A.Q.</a>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                            <i class="fa fa-search"></i> Search
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="next" href="index.html">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="software.html">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://wwwfbm.unil.ch/dnf/group/glia-an-active-synaptic-partner/member/volterra-andrea-volterra">Wwwfbm</a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#computing-servers">Computing Servers</a></li>
+            <li class="second-level"><a href="#dnfvoltdatasrv1adunilch">dnfvoltdatasrv1.ad.unil.ch</a></li>
+                
+            <li class="second-level"><a href="#dnfvoltdatasrv2adunilch">dnfvoltdatasrv2.ad.unil.ch</a></li>
+                
+            <li class="second-level"><a href="#relevant-points">Relevant points</a></li>
+                
+            <li class="second-level"><a href="#nas-storage">NAS storage</a></li>
+                
+                <li class="third-level"><a href="#unil-nas">UNIL NAS</a></li>
+                <li class="third-level"><a href="#volterra-lab-nas">Volterra Lab NAS</a></li>
+            <li class="second-level"><a href="#how-to-connect-to-servers">How to connect to servers?</a></li>
+                
+                <li class="third-level"><a href="#windows">Windows</a></li>
+                <li class="third-level"><a href="#mac">Mac</a></li>
+            <li class="second-level"><a href="#supercomputing-unil-services">Supercomputing UNIL services</a></li>
+                
+                <li class="third-level"><a href="#list-of-hpc-services">List of HPC services</a></li>
+                <li class="third-level"><a href="#procedure-to-request-access">Procedure to request access</a></li>
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<h1 id="computing-servers">Computing Servers</h1>
+<p>We actually count with 3 servers. Two of them are physically in the room and we count with a wireframe at UNIL computing facilities (NAS).</p>
+<p>To use the computer remotely go to "How to conect?" tutorial.</p>
+<p><strong>Don't shut down the computer, disconect your session when your work is over</strong></p>
+<h2 id="dnfvoltdatasrv1adunilch">dnfvoltdatasrv1.ad.unil.ch</h2>
+<ul>
+<li><strong>IP</strong>: 130.223.196.100</li>
+<li><strong>CPU</strong>: 48 Cores</li>
+<li><strong>RAM</strong>: 512GB</li>
+<li><strong>Graphic card</strong>: Radeon WX7100</li>
+<li><strong>Storage</strong>: 2TB SDD</li>
+<li><strong>Software</strong>: Imaris 8.4.2/Imaris 9.1.2/Matlab R2015b-R2018/ImageJ</li>
+<li><strong>Frequent users</strong>: Cedric, Iaroslav and Carlos</li>
+<li><strong>Pending upgrades</strong>: 1TB RAM</li>
+</ul>
+<h2 id="dnfvoltdatasrv2adunilch">dnfvoltdatasrv2.ad.unil.ch</h2>
+<ul>
+<li><strong>IP</strong>: 130.223.196.101</li>
+<li><strong>CPU</strong>: 16 Cores</li>
+<li><strong>RAM</strong>: 512GB</li>
+<li><strong>Graphic card</strong>: Radeon WX7100</li>
+<li><strong>Storage</strong>:  2TB and:<ul>
+<li>Iaroslav Disk 625GB</li>
+<li>Other Disk 600GB</li>
+</ul>
+</li>
+<li><strong>Software</strong>: Imaris 8.4.2/Matlab/ImageJ/LLastik/Blender</li>
+<li><strong>Frequent users</strong>: Barbara and Iaroslav</li>
+<li><strong>Pending upgrades</strong>: 1TB RAM</li>
+</ul>
+<h2 id="relevant-points">Relevant points</h2>
+<ol>
+<li>Do not shutdown these machines. Please do not restart these machines if other users are still connected, without asking!</li>
+<li>Volterra NAS can be accessed natively by mapping \nas-fbm-av1.unil.ch\AV_NAS_PRIVATE to a disk letter (e.g. Z: ,  see picture below). Use  \nas.unil.ch for the UNIL NAS. Use can also directly type these into the Explorer address bar.</li>
+<li>For fastest connection (especially from home), use the lowest color depth setting for Remote Desktop settings (High Color 15-bit setting). If you have a High-DPI screen (such as 3200 x 1800, common on modern laptops), you will also get much better speed by reducing your display screen resolution to e.g. 1920 x 1080 before connecting.</li>
+<li>Already installed are: Matlab R2016a, ImageJ, and Imaris 8.4 and 9.0. Imaris 9.0 is only working on dnfvoltdatasrv1 (but there is a limit on UNIL licenses, so best to try in the morning before everyone arrives). If you do not get a license, you can also use 8.4  on dnfvoltdatasrv2 (license is always available for the moment)</li>
+<li>Try to avoid saving your documents to the local C: drive (i.e. your Desktop, My Documents, etc.). Please use NAS or your external drives instead. We only have 1 TB capacity for C: , so it will fill up fast. To attach an external USB drive, you will have to physically access the machine and plug your disk into one of the USB ports.</li>
+<li>When you are done, please “Sign out” instead of disconnecting (see below how to do that).</li>
+<li>Since the RAM and video card are shared, please close the programs you do not use, particularly Imaris. One important trick is to minimize the Imaris windows if you leave them open for a long time: there is a bug where the video RAM will keep getting eaten up over time, leading to a crash, unless the window is minimized.</li>
+<li>You can view total RAM consumption through the Task manager, as well as check how much is in use by the other users (see below)</li>
+<li>To connect from home, use Pulse Secure first to get onto UNIL network. Please make sure your personal computer is virus-free.</li>
+<li>If you have old accounts on the dnfvoltdatasrv2 machine, these can still be used</li>
+<li>The machines will be restarted weekly on Saturday nice in order to install the updates (on Sunday 1 AM, actually). If this is not OK for you (running computations, etc), we can postpone the shutdown manually: just get in touch.</li>
+</ol>
+<h2 id="nas-storage">NAS storage</h2>
+<p>The lab counts with various NAS that offers storage.</p>
+<p>If you want to connect you can access directly from the explorer adreess line or in mac from the finder &gt; go to option.</p>
+<h3 id="unil-nas">UNIL NAS</h3>
+<p>This NAS belongs to university and every member of the lab has a folder that can use.</p>
+<p>To access to this NAS use this address: nas.unil.ch</p>
+<h3 id="volterra-lab-nas">Volterra Lab NAS</h3>
+<p>This NAS is for private use in the laboratory. Every member has a folder on it.</p>
+<ul>
+<li>10 gigabits (1gb/user)</li>
+<li>RAID6</li>
+<li>Secondary backup per day at 1am with backup explorer.</li>
+<li>In Sunday it does a parity check.</li>
+</ul>
+<p>To access to this NAS use this address: nas-fbm-av1.unil.ch/AV_NAS_PRIVATE (On windows: nas-fbm-av1.unil.ch\AV_NAS_PRIVATE)</p>
+<h4 id="2018-upgrade">2018 Upgrade:</h4>
+<p>28 Disk of 10TB SATA 6GB/s  -&gt; 0,28 Petabytes</p>
+<p>Upgrade made by art computer</p>
+<h2 id="how-to-connect-to-servers">How to connect to servers?</h2>
+<h3 id="windows">Windows</h3>
+<ol>
+<li>To connect from your desktop or laptop:</li>
+</ol>
+<p><img alt="" src="img/image008-1.jpg" />
+<img alt="" src="img/image005.png" /></p>
+<ol>
+<li>To connect to NAS:</li>
+</ol>
+<p><img alt="" src="img/image006.png" /></p>
+<ol>
+<li>To log off:</li>
+</ol>
+<p><img alt="" src="img/image001.png" /></p>
+<ol>
+<li>To disconnect, and leave your programs running, click Disconnect (or simply close the Remote Desktop window):</li>
+</ol>
+<p><img alt="" src="img/image003.png" /></p>
+<h3 id="mac">Mac</h3>
+<p>Donwload the application Remote Desktop Connection and follow the instructions for the windows tutorial.</p>
+<h2 id="supercomputing-unil-services">Supercomputing UNIL services</h2>
+<p>In case that we need more computational power in task that doesn't require a graphic interaction we could apply for an account in some of the supercomputing cluster that UNIL has.</p>
+<h3 id="list-of-hpc-services">List of HPC services</h3>
+<p><a href="https://www.unil.ch/ci/fr/home/menuinst/catalogue-de-services/enseignement-et-recherche/service-de-calcul.html">Service de calcul de UNIL</a></p>
+<p>Types of scientific computing resources available at the Ci:</p>
+<p>The new features are higlighted in blue</p>
+<h4 id="argos">Argos</h4>
+<p>Argos is an Intel Xeon based 8 cores interactive compute server offering GPGPU capabilities:</p>
+<ul>
+<li>Job category: Any suitable interactive job</li>
+<li>Access: via ssh to argos1.unil.ch</li>
+<li>OS: Redhat ELS 6.1</li>
+<li>CPUs: 1 x dual Xeon 5570 2.97 GHz node (8 cores), 24 GB RAM</li>
+<li>GPGPU:<ul>
+<li>1 x Nvidia Tesla c1060 (220 CUDA cores)</li>
+<li>1 x Nvidia Tesla c2070 (448 CUDA cores)</li>
+</ul>
+</li>
+<li>Network:10 Gb/s Ethernet</li>
+</ul>
+<h4 id="hippocrate">Hippocrate</h4>
+<p>Hippocrate is a small 96 cores Intel Xeon based HPC cluster:</p>
+<ul>
+<li>Job category: Any suitable parallel job or any sequential long (&lt; 96h) running job. A maximum of 1000 jobs per user in the queuing system</li>
+<li>Access: via ssh to argos1.unil.ch</li>
+<li>OS: RedHat ELS 6.1</li>
+<li>Nodes:<ul>
+<li>8 x dual Xeon 5670 2.97 GHz (12 cores), 48 GB RAM for batch processing</li>
+<li>1 x dual Xeon 5670 2.97 GHz (12 cores), 96 GB RAM for interactive jobs</li>
+</ul>
+</li>
+<li>GPGPU: 3 x Nvidia Tesla m2090 (512 CUDA cores) on 2 batch and 1 interactive nodes</li>
+<li>Interconnect: Infiniband 40 Gb/s</li>
+<li>Network: 10 Gb/s Ethernet</li>
+<li>-Parallel env.<ul>
+<li>SMP (on 12 cores)</li>
+<li>PVM</li>
+<li>MPI : OpenMPI, MVAPICH</li>
+</ul>
+</li>
+</ul>
+<h4 id="grid-computing">Grid computing</h4>
+<p>The users of UNIL have also access to two grid-based infrastructures:</p>
+<h5 id="gridunil">GridUNIL</h5>
+<p>A Condor based campus grid with ~ 300 distributed cores mainly on OSX and some on Linux or Windows platform and a grid distributed version of the R statistic environment
+- Job category: any suitable short (&lt; 12h) embarrassingly parallel jobs</p>
+<ul>
+<li>Access: via argos1.unil.ch</li>
+</ul>
+<h5 id="smscg">SMSCG</h5>
+<p>The Swiss Multisciences Computing Gridwith ~ 4000 cores mainly on Intel/Linux platform
+- Job category: depends on the type of the targeted grid enabled resources</p>
+<h4 id="cadmos">CADMOS</h4>
+<p>CADMOS is the Center for Advanced Modeling Science. It is a joint initiative between UNIL EPFL and UNIGE. They offer an access to massively parallel computing resources currently based on an IBM BlueGene/P.</p>
+<h3 id="procedure-to-request-access">Procedure to request access</h3>
+<p>Alexandre must sent a requirement to the administrator of those servers that will give us access.</p></div>
+        
+    </div>
+
+    <footer class="col-md-12 text-center">
+        <hr>
+        <p>
+        <small>This documentation is for exclusive use of Volterra Laboratory members use at DNF-UNIL. In case you find useful for others labs and you want to share first contact carlos.vivarrios@unil.ch<br></small>
+        
+        <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p></small>
+    </footer>
+
+    <script src="./js/jquery-1.10.2.min.js"></script>
+    <script src="./js/bootstrap-3.0.3.min.js"></script>
+    <script src="./js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+    var base_url = '.';
+    </script>
+    <script data-main="./mkdocs/js/search.js" src="./mkdocs/js/require.js"></script>
+    <script src="./js/base.js"></script>
+    <script src="search/main.js"></script>
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                    <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        From here you can search these documents. Enter your search terms below.
+                    </p>
+                    <form role="form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                        </div>
+                    </form>
+                    <div id="mkdocs-search-results"></div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </body>
+
+</html>
