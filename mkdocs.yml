@@ -9,5 +9,5 @@ pages:
     - Home: index.md
     - "Computing": servers.md
     - "Software": software.md
-    - "Analysis": analysis.md
+    - "LS Analysis": Linescan_analysis.md
     - "F.A.Q.": faq.md

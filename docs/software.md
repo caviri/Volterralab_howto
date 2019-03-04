@@ -39,9 +39,12 @@ It creates a single file with all the .tif files.
 > A cross-correlation plugin that performs a comprehensive list of voxel-by-voxel calculations through time in search of temporal correlation versus either an externally loaded trace, a binarized stimulus waveform, or an individual ROI extract. This allows for the easy identification of putatively time-locked regions within a 3D imaging volume. To improve the performance under the jittering response conditions, cumulative cross-correlation (area under the curve) is available in addition to the normal peak calculation. In our studies, we have applied this plugin to axonal stimulation paradigms (minimal stimulations) in the dentate gyrus and have thereby identified several regions within an astrocyte that reliably responded to the stimuli. Such regions corresponded to a fraction of <1% of the total analyzed astrocytic volume (Bindocci et al., 2017).
 
 
-#### Nicolas Matlab Scripts
+#### Nicolas Matlab Tools
 
-Here will be information about the scripts that Nicolas developed for Matlab
+##### SCAP
+
+##### XTN Software
+
 
 ## Third parties Software
 

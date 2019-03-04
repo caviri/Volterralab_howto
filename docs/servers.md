@@ -75,6 +75,14 @@ The lab counts with various NAS that offers storage.
 
 If you want to connect you can access directly from the explorer address line or in mac from the finder > go to option.
 
+### Synology
+
+To access to the control panel is necesary to have an administration account and access through here [http://130.223.30.65:5000/](http://130.223.30.65:5000/).
+
+#### Known issues
+
+From time to time a backup fail appears. This must be consider normal if only happens sporadically. 
+
 ### UNIL NAS
 
 This NAS belongs to university and every member of the lab has a PRIVATE folder that could be used.
