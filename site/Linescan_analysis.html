@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Documentation of Volterra Lab">
+    <meta name="author" content="vivar">
+    
+    <link rel="img/favicon.ico">
+
+    
+    <title>LS Analysis - Volterra Dry Lab Guide</title>
+    
+
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
+    <link href='//fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="css/base.min.css" rel="stylesheet">
+    <link href="css/cinder.min.css" rel="stylesheet">
+    <link href="css/highlight.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/mermaid@7.1.2/dist/mermaid.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+    <script src="//ajax.googleapis.com/ajax/libs/webfont/1.6.28/webfont.js"></script>
+    <script>
+    WebFont.load({
+        google: {
+            families: ['Open Sans', 'PT Sans']
+        }
+    });
+    </script>
+
+    
+
+     
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            <a class="navbar-brand" href="index.html">Volterra Dry Lab Guide</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="index.html">Home</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="servers.html">Computing</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="software.html">Software</a>
+                    </li>
+                
+                
+                
+                    <li class="active">
+                        <a href="Linescan_analysis.html">LS Analysis</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="3dsegmentation.html">3D segmentation</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="faq.html">F.A.Q.</a>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                            <i class="fas fa-search"></i> Search
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="next" href="software.html">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="3dsegmentation.html">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://wwwfbm.unil.ch/dnf/group/glia-an-active-synaptic-partner/member/volterra-andrea-volterra">Wwwfbm</a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#linescan-analysis-pipeline">LineScan Analysis Pipeline</a></li>
+            <li class="second-level"><a href="#iaroslav-ls-analysis-pipeline">Iaroslav LS Analysis Pipeline</a></li>
+                
+                <li class="third-level"><a href="#folder-structure">Folder structure</a></li>
+                <li class="third-level"><a href="#analysis">Analysis</a></li>
+            <li class="second-level"><a href="#linescan-xlsx-metadatabase">LineScan XLSX metadatabase</a></li>
+                
+                <li class="third-level"><a href="#events-sheets">Events sheets</a></li>
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<h1 id="linescan-analysis-pipeline">LineScan Analysis Pipeline</h1>
+<ul>
+<li>author: Carlos Vivar Rios</li>
+<li>date: 2019-02-25</li>
+</ul>
+<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
+
+<ul>
+<li><a href="#linescan-analysis-pipeline">LineScan Analysis Pipeline</a><ul>
+<li><a href="#iaroslav-ls-analysis-pipeline">Iaroslav LS Analysis Pipeline</a><ul>
+<li><a href="#folder-structure">Folder structure</a></li>
+<li><a href="#analysis">Analysis</a><ul>
+<li><a href="#criteria-to-describe-events">Criteria to describe events</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#linescan-xlsx-metadatabase">LineScan XLSX metadatabase</a><ul>
+<li><a href="#events-sheets">Events sheets</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<!-- /TOC -->
+
+<h2 id="iaroslav-ls-analysis-pipeline">Iaroslav LS Analysis Pipeline</h2>
+<p>This diagram was built based on comments and the ImageJ macros by Iaroslav. This Macro can be found in <code>smb://nas-fbm-av1.unil.ch/AV_NAS_PRIVATE/Iaroslav_2/for Erika/ImageJ - linescan</code></p>
+<div class="mermaid">graph TD
+    M["2photon Microscope"]--&gt;T["Raw Recording Cycles (.tif)"]
+    M --&gt; R["Reference 2D images (.tif)"]
+    T --&gt; |Average of every 20 timesteps| TD["Temporal Decimation"]
+    TD --&gt; SF["Spatial Filter (optional)"]
+    SF --&gt; RM0102["RegMax.tif (Channels 01 &amp; 02)"]
+    T --&gt; DF[ Delta F/F]
+    DF --&gt; SG["S-G Filter (Channels 03 &amp; 04)"]
+    T --&gt;|Threshold: n*SD| RM["RegMax Amplitude for pixel (Channels 05 &amp; 06)"]
+    RM --&gt; | Manual extraction of ROIs | ROI["ROIs"]
+    ROI --&gt; EF["Events File"]
+
+</div>
+
+<h3 id="folder-structure">Folder structure</h3>
+<p>The files are stored in <code>\\nas-fbm-av1.unil.ch\AV_NAS_PRIVATE\Iaroslav_2\Volterra Lab Data\imaging\2Photon</code>. <strong>Be care about the Iaroslav folder at UNIL NAS because is a partal copy of this one but without the events analysis.</strong></p>
+<pre class="highlight"><code>- Experiments
+  - /references/
+    - /LineScan-DDMMYYYY-sX-cXX-XXX-CycleXXXXX-Ch1-16bit-Reference.tif
+    - /LineScan-DDMMYYYY-sX-cXX-XXX-CycleXXXXX-Ch2-16bit-Reference.tif
+    - /LineScan-DDMMYYYY-sX-cXX-XXX-CycleXXXXX-Window1-Ch1-8bit-Reference.tif
+    - /LineScan-DDMMYYYY-sX-cXX-XXX-CycleXXXXX-Window2-Ch1-Ch2-8bit-Reference.tif
+    - /LineScan-DDMMYYYY-sX-cXX-XXX-CycleXXXXX-Window3-Ch2-8bit-Reference.tif
+    - /LineScan-DDMMYYYY-sX-cXX-XXX-CycleXXXXX-Window4-Ch1-Ch2-8bit-Reference.tif
+  - /anal/
+    - /LineScan-DDMMYYYY-sX-cXX_ch2.roi
+    - /LineScan-DDMMYYYY-sX-cXX_ch2.txt
+    - /LineScan-DDMMYYYY-sX-cXX-XXX_CycleXXXXX_Ch1_XXXXXX.ome.tifRegMax.tif
+    - /RoiSet.zip
+  - /LineScan-DDMMYYYY-sX-cXX-XXX.env
+  - /LineScan-DDMMYYYY-sX-cXX-XXX.xml
+  - /LineScan-DDMMYYYY-sX-cXX-XXX_CycleXXXXX_Ch1Source.tif
+  - /LineScan-DDMMYYYY-sX-cXX-XXX_CycleXXXXX_Ch2Source.tif
+  - /LineScan-DDMMYYYY-sX-cXX-XXX_CycleXXXXX_Ch1_XXXXXX.ome.tif [ Multiple files]
+  - /LineScan-DDMMYYYY-sX-cXX-XXX_CycleXXXXX_Ch2_XXXXXX.ome.tif [ Multiple files]
+
+</code></pre>
+
+<h3 id="analysis">Analysis</h3>
+<p>The result of the analysis is the .tif file located in <code>/anal/</code> folder. This file contains 6 channels and the <span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> axis define <strong>time</strong> while <span><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span> axis define the line traced by the microscope, so <strong>space</strong>.</p>
+<p>The channels follow this legend:</p>
+<table>
+<thead>
+<tr>
+<th>Channels</th>
+<th>Pipeline Step</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Channel 01</td>
+<td>Temporal Decimation and Spatial Filter for Microscope Channel 01</td>
+<td>Every 20 timesteps are averaged into 1 and the spatial filter depends on SNR</td>
+</tr>
+<tr>
+<td>Channel 02</td>
+<td>Temporal Decimation and Spatial Filter for Microscope Channel 02</td>
+<td>Same</td>
+</tr>
+<tr>
+<td>Channel 03</td>
+<td><span><span class="MathJax_Preview">\dfrac{\Delta F }{F}</span><script type="math/tex">\dfrac{\Delta F }{F}</script></span> with S-G filter from Channel 01</td>
+<td>The Savitzky-Golay filter smooth the curve.</td>
+</tr>
+<tr>
+<td>Channel 04</td>
+<td><span><span class="MathJax_Preview">\dfrac{\Delta F }{F}</span><script type="math/tex">\dfrac{\Delta F }{F}</script></span> with S-G filter from Channel 02</td>
+<td>The Savitzky-Golay filter smooth the curve.</td>
+</tr>
+<tr>
+<td>Channel 05</td>
+<td>RegMax amplitude for each pixel from Channel 03</td>
+<td>It uses a threshold. Is defined in the filename <em><em>rm15.0</em></em> and means q5 times the standard deviation of the RegMax amplitude distributions.</td>
+</tr>
+<tr>
+<td>Channel 06</td>
+<td>RegMax amplitude for each pixel from Channel 04</td>
+<td>Same</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Example of the file with the segmentation of the process and soma (**Horizontal Bars** and the different events ROIs.) " src="img/regmaxROIS.png" />
+<strong>Figure:</strong> Example of the file with the segmentation of the process and soma (<strong>Horizontal Bars</strong> and the different events ROIs.</p>
+<blockquote>
+<p><strong>IAROSLAV</strong>: Now, be careful about the units on the event display window: y is space along line, x is time in decimated units (typically 20 timepoints are averaged into 1!). The ROI coordinates use vertical units (space) correctly (1 pixel in ROI-y is 1 pixel along the line L), but the horizontal (time) units for the ROI need to be recalculated. Note that FWHM for time is shown in time sample points, but ROI x is shown as (sample_points)/(decimation factor)</p>
+</blockquote>
+<h4 id="criteria-to-describe-events">Criteria to describe events</h4>
+<p>The characterization of events must take in account different aspect that were compile from different Iaroslav emails:</p>
+<blockquote>
+<p>Some multi-peak events are not properly detected, if the preceding event does not properly decay back to the baseline. In practice, Iaroslav allowed a decay to 10-20%.</p>
+<p>Hence is my insistence that the cross-condition comparison is done by the same person: subjective biases will at least be reasonably constant (as opposed to one person analyzing control and another person analyzing the knockout)</p>
+</blockquote>
+<h2 id="linescan-xlsx-metadatabase">LineScan XLSX metadatabase</h2>
+<p>This excel has the following structure.
+- First sheet: General information about the experiments.
+- Second sheet: Ip3 DB
+- Third sheet: Other DB
+- GCAMP6 GREEN EVENTS: All the results that we can find in the folders of every experiment.
+- RED Control Mice EVENTS:
+- GREEN Control Mice EVENTS:</p>
+<p>The spreadsheet is on <code>smb://nas-fbm-av1.unil.ch/AV_NAS_PRIVATE/Vivar/001_LineScan Project/LINESCAN event database Excel 1k_with_ip3KO_Iaroslav_20180828.xlsx</code></p>
+<h3 id="events-sheets">Events sheets</h3>
+<p>The order of the columns is importat because even if some of them share names it correspond to Ch1 event or Ch2.</p>
+<p><strong>In the original xlsx the FWHM are named wrongly FTWH</strong></p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Cell line ID</strong></td>
+<td>ID of the cell</td>
+</tr>
+<tr>
+<td><strong>Acq sequence</strong></td>
+<td>ID of the acquisition including <strong>s</strong>, <strong>c</strong> and <strong>date</strong></td>
+</tr>
+<tr>
+<td><strong>Ch1 Event location label</strong></td>
+<td>Contains the headers of the next columns related to Ch1 and Ch2 events.</td>
+</tr>
+<tr>
+<td><strong>x</strong></td>
+<td><span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> coordinate of ROI box</td>
+</tr>
+<tr>
+<td><strong>y</strong></td>
+<td><span><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span> coordinate of ROI box. This is the real time an is decimated  so to obtain the time must <span><span class="MathJax_Preview">t = y * 20 * Sampling Rate</span><script type="math/tex">t = y * 20 * Sampling Rate</script></span>.</td>
+</tr>
+<tr>
+<td><strong>w</strong></td>
+<td><em>width</em> of ROI box</td>
+</tr>
+<tr>
+<td><strong>h</strong> (manual spatial 'spread' marker)</td>
+<td><em>height</em> of ROI box. Assuming that space is described in the <span><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span> axis this could be used as a manual spatial marker.</td>
+</tr>
+<tr>
+<td><strong>Ch1 Event properties label</strong></td>
+<td>Contains the headers of the next columns related to Ch1 events.</td>
+</tr>
+<tr>
+<td><strong>Ampl</strong></td>
+<td>Amplitude of the event in channel 1</td>
+</tr>
+<tr>
+<td><strong>Baseline</strong></td>
+<td>Baseline of the event in channel 1</td>
+</tr>
+<tr>
+<td><strong>FWHM time</strong></td>
+<td>Temporal expansion of the FWHM in channel 1</td>
+</tr>
+<tr>
+<td><strong>FWHM space (automatic calc, buggy, DO NOT USE)</strong></td>
+<td>Spatial expansion of the FWHM in channel 1</td>
+</tr>
+<tr>
+<td><strong>Ch2 Event properties label</strong></td>
+<td>Contains the headers of the next columns related to Ch2 events.</td>
+</tr>
+<tr>
+<td><strong>Ampl</strong></td>
+<td>Amplitude of the event in channel 2</td>
+</tr>
+<tr>
+<td><strong>Baseline</strong></td>
+<td>Baseline of event in channel 2</td>
+</tr>
+<tr>
+<td><strong>FWHM time</strong></td>
+<td>Temporal expansion of the FWHM in channel 1</td>
+</tr>
+<tr>
+<td><strong>FWHM space (automatic calc, buggy, DO NOT USE)</strong></td>
+<td>Spatial expansion of the FWHM in channel 1</td>
+</tr>
+<tr>
+<td><strong>Sampling interval (s)</strong></td>
+<td>Interval between two images</td>
+</tr>
+<tr>
+<td><strong>Resolution (micron per pixel)</strong></td>
+<td>Equivalency between micrometers and pixels</td>
+</tr>
+<tr>
+<td><strong>Ch1 Indicator label</strong></td>
+<td>Indicator used for channel 1. <strong>s</strong>: SR101, <strong>g6</strong>: GCamp6F</td>
+</tr>
+<tr>
+<td><strong>Ch2 Indicator label</strong></td>
+<td>Indicator used for channel 1. <strong>s</strong>: SR101, <strong>g6</strong>: GCamp6F</td>
+</tr>
+<tr>
+<td><strong>Soma middle position (pixels)</strong></td>
+<td>Central position of the SOMA <strong>If the laser cross the soma twice is not described?</strong></td>
+</tr>
+<tr>
+<td><strong>Process start (pix)</strong></td>
+<td>Coordinate of the process start</td>
+</tr>
+<tr>
+<td><strong>Process stop (pix)</strong></td>
+<td>Coordinate of the process end</td>
+</tr>
+</tbody>
+</table>
+<p>The number of colums will be different because if one cell recording contains more than 1 process will have two extra columns (Process start and Process stop) for every proccess.</p></div>
+        
+        
+    </div>
+
+    <footer class="col-md-12 text-center">
+        
+        <hr>
+        <p>
+        <small>This documentation is for exclusive use of Volterra Laboratory members use at DNF-UNIL. In case you find useful for others labs and you want to share first contact carlos.vivarrios@unil.ch<br></small>
+        
+        <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p></small>
+
+        
+        
+    </footer>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap-3.0.3.min.js"></script>
+    <script src="js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+    var base_url = '.';
+    </script>
+    <script src="js/base.js"></script>
+    <script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
+    <script src="search/main.js"></script>
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                    <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        From here you can search these documents. Enter your search terms below.
+                    </p>
+                    <form role="form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                        </div>
+                    </form>
+                    <div id="mkdocs-search-results"></div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </body>
+
+</html>

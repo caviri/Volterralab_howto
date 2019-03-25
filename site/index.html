@@ -5,28 +5,32 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Documentation of Volterra Lab"> 
-    <meta name="author" content="vivar"> 
-    <link rel="shortcut icon" href="./img/favicon.ico">
+    <meta name="description" content="Documentation of Volterra Lab">
+    <meta name="author" content="vivar">
+    
+    <link rel="img/favicon.ico">
 
+    
     <title>Home - Volterra Dry Lab Guide</title>
+    
 
-    <link href="./css/bootstrap-custom.min.css" rel="stylesheet">
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/2.018/css/hack.min.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
     <link href='//fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
-    <link href="./css/base.css" rel="stylesheet">
-    <link href="./css/cinder.css" rel="stylesheet">
-    <link rel="stylesheet" href="./css/highlight.css">
+    <link href="css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="css/base.min.css" rel="stylesheet">
+    <link href="css/cinder.min.css" rel="stylesheet">
+    <link href="css/highlight.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/mermaid@7.1.2/dist/mermaid.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
         <![endif]-->
 
-    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/webfont/1.6.28/webfont.js"></script>
     <script>
     WebFont.load({
         google: {
@@ -36,6 +40,8 @@
     </script>
 
     
+
+     
 </head>
 
 <body class="homepage" >
@@ -84,6 +90,18 @@
                 
                 
                     <li >
+                        <a href="Linescan_analysis.html">LS Analysis</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="3dsegmentation.html">3D segmentation</a>
+                    </li>
+                
+                
+                
+                    <li >
                         <a href="faq.html">F.A.Q.</a>
                     </li>
                 
@@ -93,17 +111,17 @@
             <ul class="nav navbar-nav navbar-right">
                     <li>
                         <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
-                            <i class="fa fa-search"></i> Search
+                            <i class="fas fa-search"></i> Search
                         </a>
                     </li>
                     <li class="disabled">
                         <a rel="next" >
-                            <i class="fa fa-arrow-left"></i> Previous
+                            <i class="fas fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
                         <a rel="prev" href="servers.html">
-                            Next <i class="fa fa-arrow-right"></i>
+                            Next <i class="fas fa-arrow-right"></i>
                         </a>
                     </li>
                     <li>
@@ -116,9 +134,12 @@
 
     <div class="container">
         
+        
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
         <li class="first-level active"><a href="#welcome-to-volterra-dry-lab-guide">Welcome to Volterra Dry Lab Guide</a></li>
+            <li class="second-level"><a href="#lastupdates-changelog">Lastupdates (Changelog)</a></li>
+                
             <li class="second-level"><a href="#list-of-content">List of content</a></li>
                 
             <li class="second-level"><a href="#dry-work-phylosophy">Dry Work Phylosophy</a></li>
@@ -133,9 +154,13 @@
 
 <h1 id="welcome-to-volterra-dry-lab-guide">Welcome to Volterra Dry Lab Guide</h1>
 <p>Here you will find all the relevant information regarding IT equipment, servers use, tools developed and much <a href="img/cat_comt.gif"> m</a>ore.</p>
-<p><strong>Last Update</strong>: 10/10/2018
+<p><strong>Last Update</strong>: 25/03/2019
 <strong>Last Author</strong>: Carlos Vivar</p>
 <p><img alt="" src="img/astro.gif" /></p>
+<h2 id="lastupdates-changelog">Lastupdates (Changelog)</h2>
+<ul>
+<li><strong>25/03/2019</strong>: Introduced Iaroslav tutorials and Jupyter notebook. </li>
+</ul>
 <h2 id="list-of-content">List of content</h2>
 <ul>
 <li>Information about the servers</li>
@@ -165,25 +190,30 @@
 <h2 id="credits">Credits</h2>
 <p>This documentation uses <a href="https://www.mkdocs.org/">Mkdocs</a>, it's a simple tool to write plain text markdown files and then turn it into a website. If you want to know how to add content just contact with: <a href="mailto:carlos.vivarrios@unil.ch">carlos.vivarrios@unil.ch</a></p></div>
         
+        
     </div>
 
     <footer class="col-md-12 text-center">
+        
         <hr>
         <p>
         <small>This documentation is for exclusive use of Volterra Laboratory members use at DNF-UNIL. In case you find useful for others labs and you want to share first contact carlos.vivarrios@unil.ch<br></small>
         
         <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p></small>
+
+        
+        
     </footer>
 
-    <script src="./js/jquery-1.10.2.min.js"></script>
-    <script src="./js/bootstrap-3.0.3.min.js"></script>
-    <script src="./js/highlight.pack.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap-3.0.3.min.js"></script>
+    <script src="js/highlight.pack.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
     <script>
     var base_url = '.';
     </script>
-    <script data-main="./mkdocs/js/search.js" src="./mkdocs/js/require.js"></script>
-    <script src="./js/base.js"></script>
+    <script src="js/base.js"></script>
+    <script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
     <script src="search/main.js"></script>
 
     <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
@@ -219,5 +249,5 @@
 
 <!--
 MkDocs version : 1.0.4
-Build Date UTC : 2018-10-10 13:39:21
+Build Date UTC : 2019-03-25 14:51:20
 -->
