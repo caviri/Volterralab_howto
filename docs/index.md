@@ -2,10 +2,14 @@
 
 Here you will find all the relevant information regarding IT equipment, servers use, tools developed and much [ m](img/cat_comt.gif)ore.
 
-**Last Update**: 17/10/2018
+**Last Update**: 25/03/2019
 **Last Author**: Carlos Vivar
 
 ![](img/astro.gif)
+
+## Lastupdates (Changelog)
+
+- **25/03/2019**: Introduced Iaroslav tutorials and Jupyter notebook. 
 
 ## List of content
 

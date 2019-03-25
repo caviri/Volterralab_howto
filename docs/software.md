@@ -12,6 +12,16 @@ Here will be information about the scripts that Iaroslav developed for ImageJ an
 
 [Studying Axon-Astrocyte Functional Interactions by 3D Two-Photon Ca2+ Imaging: A Practical Guide to Experiments and “Big Data” Analysis](https://www.frontiersin.org/articles/10.3389/fncel.2018.00098/full)
 
+You can find a tutorial about Iaroslav's tools in this next videos:
+
+<video width="320" height="240" controls>
+  <source src="/media/nas-fbm-av1/software/2019_Iaroslav's plugins video explanation/webm/001.webm" type="video/mp4">
+</video>
+
+- [Video 002](/media/nas-fbm-av1/software/2019_Iaroslav's\ plugins\ video\ explanation/webm/002.webm)
+- [Video 003](/media/nas-fbm-av1/software/2019_Iaroslav's\ plugins\ video\ explanation/webm/003.webm)
+- [Video 004](/media/nas-fbm-av1/software/2019_Iaroslav's\ plugins\ video\ explanation/webm/004.webm)
+- [Video 005](/media/nas-fbm-av1/software/2019_Iaroslav's\ plugins\ video\ explanation/webm/005.webm)
 
 
 #### Batch-processing of acqusition stacks
@@ -38,17 +48,82 @@ It creates a single file with all the .tif files.
 
 > A cross-correlation plugin that performs a comprehensive list of voxel-by-voxel calculations through time in search of temporal correlation versus either an externally loaded trace, a binarized stimulus waveform, or an individual ROI extract. This allows for the easy identification of putatively time-locked regions within a 3D imaging volume. To improve the performance under the jittering response conditions, cumulative cross-correlation (area under the curve) is available in addition to the normal peak calculation. In our studies, we have applied this plugin to axonal stimulation paradigms (minimal stimulations) in the dentate gyrus and have thereby identified several regions within an astrocyte that reliably responded to the stimuli. Such regions corresponded to a fraction of <1% of the total analyzed astrocytic volume (Bindocci et al., 2017).
 
+##### Version 2.0
+
+Recently Iaroslav released a new version of the tool that will provide us a Megastack as a result. The image must be in 32bits and the $t$ dimension must be corrected defined. If not yoou can Re-Order Hyperstacks Dimensions.
+
+<img src="img/cccscreen.png" width="600">
+
+When calculating the $ \frac{\Delta f}{f}$. The f instead of being the average when it goes down the global average is defined like that one.
+
+Megastack Channel | Definition
+---- | ---
+Channel1: | Raw Data if bleached
+Channel2: | Raw Data
+Channel3: | Event detected
+Channel4: | Event Nuclei
+Channel5: | Event Cross-Correlation
+Channel6: | Hybrid Event map with threshold from CCC and Z-Score
+
+Those channels will be multiplied by 2 if 2 recording channels has been analyzed
+
+```mermaid
+graph TD
+
+RD["Raw Data"] --> B["Bleaching Correction"]
+B --> SG["Savinsky Golay Filter"]
+SG --> DFF["Df/F"]
+DFF --> ZS["Zscore"]
+ZS --> FFT["FFT?"]
+FFT --> FM["Frequency Map"]
+
+ZS --> CCC["Cumulative Cross Correlation"]
+CCC --> EN["Event Nuclei"]
+
+EN --> CF["High pass filter of 0.2"]
+
+ZS --> ZF["High pass filter of 0.8"]
+
+ZF --> HM["Hybrid Map"]
+CF --> HM
+```
+
+This tool is available in this folder in the NAS:
+
+```
+:\\AV_NAS_PRIVATE\Vivar\Tools\Iaroslav\Correlation_Calculator\ZVivarToolsIaroslavCorrelation_Calculator.java
+```
+
 
 #### Nicolas Matlab Tools
 
 ##### SCAP
 
+Allow us to calculate ROI over a process and calculate the number of events depending of the Regional maximum.
+
 ##### XTN Software
 
+This is an implementation of the SCAP software to work in 3D. After defining a core (i.e. soma) the tool will caculate geodesic spheres with an specific separation that will crop the mesh.
 
 ## Third parties Software
 
 Information about the software that we uses usually in the lab.
+
+### JupyterLab
+
+A [jupyter notebook](http://jupyter.org) is an interactive platform that allow us to create documents based on text, code and interactive plots and everything through the browser. Jupyterlab take the different parts of the classic notebooks and provide a more user-friendly with extensions. Here you have a nice 10 min summary:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ctOM-Gza04Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+#### How to Install
+
+To install jupyterlab first you need to have Python3 installed, we recommend the installation of anaconda that will manage the packages installed in python too.
+
+1. Install Anaconda from here: [Choose the version Python 3.7](https://www.anaconda.com/distribution/)
+2. Open the Windows powershell or the terminal
+3. Install jupyterlab introducing this command: `conda install -c conda-forge jupyterlab`
+4. Open jupterlab in your broseer using this command: `jupyter lab`
 
 ### Imaris
 
@@ -111,7 +186,6 @@ git checkout BRANCH
 
 - Jupyter notebooks
 - Webpages
--
 
 
 #### Get an institutional account
@@ -126,6 +200,7 @@ When you download ImageJ it came without any plugin. To get more the functionali
 
 ### Python
 
+#### Learn Python
 Here you have some resources to learn Python.
 
 - [Rosalind](http://rosalind.info/problems/ini1/): La mia favorita plataforma. Tu puoi imparare a programmare risolvendo i problem di bioinformatica. E molto interessante e la mia favorita.
@@ -147,4 +222,4 @@ If you want to install the lastest version of Microsoft Office you could check t
 
 ### Matlab
 
-To install MATLAB you must go to the UNIL list of[software available](https://wwwfbm.unil.ch/wiki/si/en:public:services:logiciels). Also could be found in our software folder in the NAS.
+To install MATLAB you must go to the UNIL list of [software available](https://wwwfbm.unil.ch/wiki/si/en:public:services:logiciels). Also could be found in our software folder in the NAS.

@@ -10,6 +10,7 @@ pages:
     - "Computing": servers.md
     - "Software": software.md
     - "LS Analysis": Linescan_analysis.md
+    - "3D segmentation": 3dsegmentation.md
     - "F.A.Q.": faq.md
 
 markdown_extensions:
