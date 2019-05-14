@@ -9,7 +9,8 @@ Here you will find all the relevant information regarding IT equipment, servers 
 
 ## Lastupdates (Changelog)
 
-- **25/03/2019**: Introduced Iaroslav tutorials and Jupyter notebook. 
+- **14/05/2019**: JupyterHUB guide
+- **25/03/2019**: Introduced Iaroslav tutorials and Jupyter notebook.
 
 ## List of content
 

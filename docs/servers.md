@@ -33,25 +33,45 @@ To use the computer remotely go to "How to conect?" tutorial.
 ### dnfvoltdatasrv3.ad.unil.ch (Not available yet)
 We are going to configure a computing server based in Ubuntu. We are going to use it mainly for non-graphical computational tasks that will be send to the server through a password secured ssh connection using the slurm workload manager.
 
+
+- **IP**: 130.223.197.152
 - **CPU**: 48 Cores
 - **RAM**: 1TB
 - **OS**: Ubuntu 18.04
 - **Graphic card**: Quadro P5000
 - **Storage**:  2TB SSD
 - **Software**: Python2/Python3/R/Matlab/Ruby/Julia/
-- **Frequent users**:
+- **Frequent users**: Carlos, Erika, Cedric and Claudia
 
-Slurm is compatible with Ubuntu 18.04. And it will manage all the tools and taks that are sent to the computer
+#### Jupyter hub
 
-1. Every task performed will be explicitly defined. (It will be possible to replicate any analysis easily)
-2. The performance of the machine will be higher than in Windows
-3. It will be possible to use GPU-computing
-4. Multiple users could sent the task to compute and if some error appear it will be logged in a file.
-5. It secure as Windows server
-6. non-graphical interface doesn’t mean that you are not going to have graphical inputs or outputs. It means that the computational task is going to be follow through the console.
+##### How to use it
 
-This kind of systems are implemented in every bioinformatic lab and are standard ways to analyse the data, so engineers, physicist and computational biologists could it be familiar with it. May it be that the members of the team require some training in how to use properly but it something affordable that I can organise. This diversification of our IT resources will provide us the best of every system.
+To access you need to write `130.223.197.152:7777` in your browser. This will allow you to have your jupyter session. The path of the folder that appear in your left is `/home/jhub/jupyter_server` and if you open a terminal this will connect directly to your linux session.
 
+You can login with your name and the password that you must know ;)
+
+If you wish to have access to the clasic jupyter notebook interface you can access changing the link deleting lab and adding `tree`:
+```
+130.223.197.152:7777/user/{your name}/tree
+```
+This a production environment so that means that we are going to keep the system as stable as possible. If you require some packages, just tell me. And if there is any conflict we can study how to create a new virtual environment for you. But by now let's try to use all the last version of python packages in `python 3.7`. 
+
+##### How to install it
+
+In order to configure jupyterhub an administrator account has been created: *jhub*. Inside their home folder a **jupyter_server** folder has been created and the NAS has been mounted there with reading permissions. A file named `mountNAS.sh` could be executed to remount again the NAS. All the other folders have been granted with reading/writting permissions in order to allow other users to create notebooks.
+
+During the installation numerous problems appeared:
+
+- Shared packages: Anaconda was installed in /opt/anaconda3
+	- Problem with the proxy path: `c.ConfigurableHTTPProxy.command = '/opt/anaconda3/bin/configurable-http-proxy'`
+- Configuration of the IP and port:
+	- `c.JupyterHub.bind_url = 'http://130.223.197.152:7777'`
+	- `c.ConfigurableHTTPProxy.api_url = 'http://130.223.197.152:7776'`
+- Creation of users: A system account has been created for every user in the whitelist.
+- Permissions problems: The users only can write or open notebooks in those folders allowed to
+
+The execution of the server must be done in root after doing a `sudo -s`. Is inside a tmux session that could be attached using `tmux attach-session -t jupyterhub`
 
 ### Relevant points
 
@@ -81,7 +101,7 @@ To access to the control panel is necesary to have an administration account and
 
 #### Known issues
 
-From time to time a backup fail appears. This must be consider normal if only happens sporadically. 
+From time to time a backup fail appears. This must be consider normal if only happens sporadically.
 
 ### UNIL NAS
 
