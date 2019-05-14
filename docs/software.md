@@ -14,11 +14,11 @@ Here will be information about the scripts that Iaroslav developed for ImageJ an
 
 You can find a tutorial about Iaroslav's tools in this next videos:
 
-<video width="320" height="240" controls>
-  <source src="/media/nas-fbm-av1/software/2019_Iaroslav's plugins video explanation/webm/001.webm" type="video/mp4">
+<video width="720" controls>
+  <source src="webm/001.webm" type="video/mp4">
 </video>
 
-- [Video 002](/media/nas-fbm-av1/software/2019_Iaroslav's\ plugins\ video\ explanation/webm/002.webm)
+- [Video 002](webm/002.webm)
 - [Video 003](/media/nas-fbm-av1/software/2019_Iaroslav's\ plugins\ video\ explanation/webm/003.webm)
 - [Video 004](/media/nas-fbm-av1/software/2019_Iaroslav's\ plugins\ video\ explanation/webm/004.webm)
 - [Video 005](/media/nas-fbm-av1/software/2019_Iaroslav's\ plugins\ video\ explanation/webm/005.webm)

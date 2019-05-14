@@ -5,28 +5,32 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Documentation of Volterra Lab"> 
-    <meta name="author" content="vivar"> 
-    <link rel="shortcut icon" href="./img/favicon.ico">
+    <meta name="description" content="Documentation of Volterra Lab">
+    <meta name="author" content="vivar">
+    
+    <link rel="img/favicon.ico">
 
+    
     <title>Software - Volterra Dry Lab Guide</title>
+    
 
-    <link href="./css/bootstrap-custom.min.css" rel="stylesheet">
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/2.018/css/hack.min.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
     <link href='//fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
-    <link href="./css/base.css" rel="stylesheet">
-    <link href="./css/cinder.css" rel="stylesheet">
-    <link rel="stylesheet" href="./css/highlight.css">
+    <link href="css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="css/base.min.css" rel="stylesheet">
+    <link href="css/cinder.min.css" rel="stylesheet">
+    <link href="css/highlight.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/mermaid@7.1.2/dist/mermaid.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
         <![endif]-->
 
-    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/webfont/1.6.28/webfont.js"></script>
     <script>
     WebFont.load({
         google: {
@@ -36,6 +40,8 @@
     </script>
 
     
+
+     
 </head>
 
 <body>
@@ -84,6 +90,18 @@
                 
                 
                     <li >
+                        <a href="Linescan_analysis.html">LS Analysis</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="3dsegmentation.html">3D segmentation</a>
+                    </li>
+                
+                
+                
+                    <li >
                         <a href="faq.html">F.A.Q.</a>
                     </li>
                 
@@ -93,17 +111,17 @@
             <ul class="nav navbar-nav navbar-right">
                     <li>
                         <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
-                            <i class="fa fa-search"></i> Search
+                            <i class="fas fa-search"></i> Search
                         </a>
                     </li>
                     <li >
                         <a rel="next" href="servers.html">
-                            <i class="fa fa-arrow-left"></i> Previous
+                            <i class="fas fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="faq.html">
-                            Next <i class="fa fa-arrow-right"></i>
+                        <a rel="prev" href="Linescan_analysis.html">
+                            Next <i class="fas fa-arrow-right"></i>
                         </a>
                     </li>
                     <li>
@@ -116,6 +134,7 @@
 
     <div class="container">
         
+        
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
         <li class="first-level active"><a href="#software-information">Software Information</a></li>
@@ -124,7 +143,9 @@
                 <li class="third-level"><a href="#iaroslav-image-j-scripts">Iaroslav Image J Scripts</a></li>
             <li class="second-level"><a href="#third-parties-software">Third parties Software</a></li>
                 
+                <li class="third-level"><a href="#jupyterlab">JupyterLab</a></li>
                 <li class="third-level"><a href="#imaris">Imaris</a></li>
+                <li class="third-level"><a href="#github">Github</a></li>
                 <li class="third-level"><a href="#imagej">ImageJ</a></li>
                 <li class="third-level"><a href="#python">Python</a></li>
                 <li class="third-level"><a href="#r">R</a></li>
@@ -141,6 +162,17 @@
 <h3 id="iaroslav-image-j-scripts">Iaroslav Image J Scripts</h3>
 <p>Here will be information about the scripts that Iaroslav developed for ImageJ analysis. Documentation about this software could be found in the article:</p>
 <p><a href="https://www.frontiersin.org/articles/10.3389/fncel.2018.00098/full">Studying Axon-Astrocyte Functional Interactions by 3D Two-Photon Ca2+ Imaging: A Practical Guide to Experiments and “Big Data” Analysis</a></p>
+<p>You can find a tutorial about Iaroslav's tools in this next videos:</p>
+<video width="320" height="240" controls>
+  <source src="/../../media/nas-fbm-av1/software/2019_Iaroslav's plugins video explanation/webm/001.webm" type="video/mp4">
+</video>
+
+<ul>
+<li><a href="/../../media/nas-fbm-av1/software/2019_Iaroslav's plugins video explanation/webm/002.webm">Video 002</a></li>
+<li><a href="/media/nas-fbm-av1/software/2019_Iaroslav's plugins video explanation/webm/003.webm">Video 003</a></li>
+<li><a href="/media/nas-fbm-av1/software/2019_Iaroslav's plugins video explanation/webm/004.webm">Video 004</a></li>
+<li><a href="/media/nas-fbm-av1/software/2019_Iaroslav's plugins video explanation/webm/005.webm">Video 005</a></li>
+</ul>
 <h4 id="batch-processing-of-acqusition-stacks">Batch-processing of acqusition stacks</h4>
 <p>It creates a single file with all the .tif files.</p>
 <h4 id="gaussian_filter5d">Gaussian_Filter5D</h4>
@@ -158,10 +190,86 @@
 <blockquote>
 <p>A cross-correlation plugin that performs a comprehensive list of voxel-by-voxel calculations through time in search of temporal correlation versus either an externally loaded trace, a binarized stimulus waveform, or an individual ROI extract. This allows for the easy identification of putatively time-locked regions within a 3D imaging volume. To improve the performance under the jittering response conditions, cumulative cross-correlation (area under the curve) is available in addition to the normal peak calculation. In our studies, we have applied this plugin to axonal stimulation paradigms (minimal stimulations) in the dentate gyrus and have thereby identified several regions within an astrocyte that reliably responded to the stimuli. Such regions corresponded to a fraction of &lt;1% of the total analyzed astrocytic volume (Bindocci et al., 2017).</p>
 </blockquote>
-<h4 id="nicolas-matlab-scripts">Nicolas Matlab Scripts</h4>
-<p>Here will be information about the scripts that Nicolas developed for Matlab</p>
+<h5 id="version-20">Version 2.0</h5>
+<p>Recently Iaroslav released a new version of the tool that will provide us a Megastack as a result. The image must be in 32bits and the <span><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span> dimension must be corrected defined. If not yoou can Re-Order Hyperstacks Dimensions.</p>
+<p><img src="img/cccscreen.png" width="600"></p>
+<p>When calculating the $ \frac{\Delta f}{f}$. The f instead of being the average when it goes down the global average is defined like that one.</p>
+<table>
+<thead>
+<tr>
+<th>Megastack Channel</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Channel1:</td>
+<td>Raw Data if bleached</td>
+</tr>
+<tr>
+<td>Channel2:</td>
+<td>Raw Data</td>
+</tr>
+<tr>
+<td>Channel3:</td>
+<td>Event detected</td>
+</tr>
+<tr>
+<td>Channel4:</td>
+<td>Event Nuclei</td>
+</tr>
+<tr>
+<td>Channel5:</td>
+<td>Event Cross-Correlation</td>
+</tr>
+<tr>
+<td>Channel6:</td>
+<td>Hybrid Event map with threshold from CCC and Z-Score</td>
+</tr>
+</tbody>
+</table>
+<p>Those channels will be multiplied by 2 if 2 recording channels has been analyzed</p>
+<div class="mermaid">graph TD
+
+RD["Raw Data"] --&gt; B["Bleaching Correction"]
+B --&gt; SG["Savinsky Golay Filter"]
+SG --&gt; DFF["Df/F"]
+DFF --&gt; ZS["Zscore"]
+ZS --&gt; FFT["FFT?"]
+FFT --&gt; FM["Frequency Map"]
+
+ZS --&gt; CCC["Cumulative Cross Correlation"]
+CCC --&gt; EN["Event Nuclei"]
+
+EN --&gt; CF["High pass filter of 0.2"]
+
+ZS --&gt; ZF["High pass filter of 0.8"]
+
+ZF --&gt; HM["Hybrid Map"]
+CF --&gt; HM</div>
+
+<p>This tool is available in this folder in the NAS:</p>
+<pre class="highlight"><code>:\\AV_NAS_PRIVATE\Vivar\Tools\Iaroslav\Correlation_Calculator\ZVivarToolsIaroslavCorrelation_Calculator.java</code></pre>
+
+<h4 id="nicolas-matlab-tools">Nicolas Matlab Tools</h4>
+<h5 id="scap">SCAP</h5>
+<p>Allow us to calculate ROI over a process and calculate the number of events depending of the Regional maximum.</p>
+<h5 id="xtn-software">XTN Software</h5>
+<p>This is an implementation of the SCAP software to work in 3D. After defining a core (i.e. soma) the tool will caculate geodesic spheres with an specific separation that will crop the mesh.</p>
 <h2 id="third-parties-software">Third parties Software</h2>
 <p>Information about the software that we uses usually in the lab.</p>
+<h3 id="jupyterlab">JupyterLab</h3>
+<p>A <a href="http://jupyter.org">jupyter notebook</a> is an interactive platform that allow us to create documents based on text, code and interactive plots and everything through the browser. Jupyterlab take the different parts of the classic notebooks and provide a more user-friendly with extensions. Here you have a nice 10 min summary:</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ctOM-Gza04Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<h4 id="how-to-install">How to Install</h4>
+<p>To install jupyterlab first you need to have Python3 installed, we recommend the installation of anaconda that will manage the packages installed in python too.</p>
+<ol>
+<li>Install Anaconda from here: <a href="https://www.anaconda.com/distribution/">Choose the version Python 3.7</a></li>
+<li>Open the Windows powershell or the terminal</li>
+<li>Install jupyterlab introducing this command: <code>conda install -c conda-forge jupyterlab</code></li>
+<li>Open jupterlab in your broseer using this command: <code>jupyter lab</code></li>
+</ol>
 <h3 id="imaris">Imaris</h3>
 <p>We are using actually two versions of IMARIS:</p>
 <ul>
@@ -180,38 +288,74 @@
 <li>Discount for Loyalty of 10%</li>
 <li>Discount for Multi-license of 10%</li>
 </ol>
+<h3 id="github">Github</h3>
+<p><a href="https://github.com/">Github</a> is an remote-online repository that allow to share an collaborate in code-based projects. Is based in git a control version software.</p>
+<p><img alt="" src="img/git-operations.png" /></p>
+<p>In order to use it you can use write commands in the terminal (if you already have installed git) or you dan download the graphical interface from <a href="https://desktop.github.com/">Github webpage</a>.</p>
+<h4 id="basic-actions">Basic actions</h4>
+<pre class="highlight"><code>git init</code></pre>
+
+<pre class="highlight"><code>git add example.txt
+# To add everything
+git add *</code></pre>
+
+<pre class="highlight"><code>git commit -m "Message"</code></pre>
+
+<pre class="highlight"><code>git push -u origin master</code></pre>
+
+<pre class="highlight"><code>git checkout BRANCH</code></pre>
+
+<h4 id="interesting-features">Interesting features</h4>
+<ul>
+<li>Jupyter notebooks</li>
+<li>Webpages</li>
+</ul>
+<h4 id="get-an-institutional-account">Get an institutional account</h4>
+<p>Once you have your github account you can ask for an education discount that will allow you to have private repositories <a href="https://education.github.com/benefits">here</a></p>
 <h3 id="imagej">ImageJ</h3>
+<p>Image J is a general suite for image analysis. Is widely used and counts with an active community that is developing plugins and macros.</p>
+<p>When you download ImageJ it came without any plugin. To get more the functionalities we recommend to download FIJI (FIJI is just ImageJ).</p>
 <h3 id="python">Python</h3>
-<h4 id="basic-snippets">Basic Snippets</h4>
+<h4 id="learn-python">Learn Python</h4>
+<p>Here you have some resources to learn Python.</p>
+<ul>
+<li><a href="http://rosalind.info/problems/ini1/">Rosalind</a>: La mia favorita plataforma. Tu puoi imparare a programmare risolvendo i problem di bioinformatica. E molto interessante e la mia favorita.</li>
+<li><a href="https://www.edx.org/es/course/cs50s-introduction-computer-science-harvardx-cs50x">CS50 Introduction to Computer Science.</a> Per acquisire un modo di pensare computazionale questo corso e molto buono.</li>
+<li><a href="https://www.datacamp.com/courses/intro-to-python-for-data-science?utm_source=adwords_ppc&amp;utm_campaignid=805200711&amp;utm_adgroupid=43370829484&amp;utm_device=c&amp;utm_keyword=%2Bdata%20%2Bcamp%20%2Bpython&amp;utm_matchtype=b&amp;utm_network=g&amp;utm_adpostion=1t1&amp;utm_creative=255831678428&amp;utm_targetid=aud-392016246653:kwd-414126609980&amp;utm_loc_interest_ms=&amp;utm_loc_physical_ms=1003196&amp;gclid=CjwKCAiA2fjjBRAjEiwAuewS_VNJ8IT4YfFeUd2oe0jHQQKiZ1f0jAHApLf2SBA7kOFVGLZD2LaLJhoC9Z4QAvD_BwE">DataCamp</a> Per un’esperienza piu interattiva e breve tu puoi provare questo.</li>
+</ul>
 <h4 id="tensorflow">Tensorflow</h4>
 <p>Tensorflow is a library for machine learning.</p>
 <h3 id="r">R</h3>
 <p>R is a software for oriented for data analysis and statistics that is widely use in many fields, specifically in bioinformatics.</p>
-<h4 id="basic-snippets_1">Basic Snippets</h4>
 <h3 id="microsoft-office-suite">Microsoft Office Suite</h3>
 <p>If you want to install the lastest version of Microsoft Office you could check the list of software available in this <a href="https://wwwfbm.unil.ch/wiki/si/en:public:services:logiciels">link</a></p>
 <h3 id="matlab">Matlab</h3>
-<p>To install MATLAB you must go to the UNIL list of<a href="https://wwwfbm.unil.ch/wiki/si/en:public:services:logiciels">software available</a></p></div>
+<p>To install MATLAB you must go to the UNIL list of <a href="https://wwwfbm.unil.ch/wiki/si/en:public:services:logiciels">software available</a>. Also could be found in our software folder in the NAS.</p></div>
+        
         
     </div>
 
     <footer class="col-md-12 text-center">
+        
         <hr>
         <p>
         <small>This documentation is for exclusive use of Volterra Laboratory members use at DNF-UNIL. In case you find useful for others labs and you want to share first contact carlos.vivarrios@unil.ch<br></small>
         
         <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p></small>
+
+        
+        
     </footer>
 
-    <script src="./js/jquery-1.10.2.min.js"></script>
-    <script src="./js/bootstrap-3.0.3.min.js"></script>
-    <script src="./js/highlight.pack.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap-3.0.3.min.js"></script>
+    <script src="js/highlight.pack.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
     <script>
     var base_url = '.';
     </script>
-    <script data-main="./mkdocs/js/search.js" src="./mkdocs/js/require.js"></script>
-    <script src="./js/base.js"></script>
+    <script src="js/base.js"></script>
+    <script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
     <script src="search/main.js"></script>
 
     <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
