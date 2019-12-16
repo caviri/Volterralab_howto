@@ -219,12 +219,13 @@ To facilitate the use of this 3D atlases I  let in our NAS a folder named resour
 	2. Load the annotation P56_ARA_v3_annotation.nii.gz
 	3. Import the labels p56_ARA_v3.label 
 
-![](ITK-A.png)
+<img src="img/analysis/ITK-A.png" width="600">
+
 If you have issues rendering the 3D model, click on Decimate mesh inside preferences. 
 
 - Brain Explorer 2: In case you need to consult the gene expression in some areas based on hibdridization in situ or you want to check afferents/efferents paths. https://mouse.brain-map.org/static/brainexplorer
 
-![](ITK-B.png)
+<img src="img/analysis/ITK-B.png" width="600">
 
 Have something in mind, the ARA (Allen Reference Atlas) is actually the 3th release so take this in account reading old papers or consulting databases. I saved the other versions in the atlas folder but labels creation require to use the python script (in tools). 
 
