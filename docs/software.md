@@ -207,6 +207,30 @@ Here you have some resources to learn Python.
 - [CS50 Introduction to Computer Science.](https://www.edx.org/es/course/cs50s-introduction-computer-science-harvardx-cs50x) Per acquisire un modo di pensare computazionale questo corso e molto buono.
 - [DataCamp](https://www.datacamp.com/courses/intro-to-python-for-data-science?utm_source=adwords_ppc&utm_campaignid=805200711&utm_adgroupid=43370829484&utm_device=c&utm_keyword=%2Bdata%20%2Bcamp%20%2Bpython&utm_matchtype=b&utm_network=g&utm_adpostion=1t1&utm_creative=255831678428&utm_targetid=aud-392016246653:kwd-414126609980&utm_loc_interest_ms=&utm_loc_physical_ms=1003196&gclid=CjwKCAiA2fjjBRAjEiwAuewS_VNJ8IT4YfFeUd2oe0jHQQKiZ1f0jAHApLf2SBA7kOFVGLZD2LaLJhoC9Z4QAvD_BwE) Per un’esperienza piu interattiva e breve tu puoi provare questo.
 
+#### ITK-SNAP
+
+For use the 3D mouse atlases the Paxinos Stereotaxic Coordinates are not directly compatible. There is no clear standard yet but it seems like the Allen Common Coordinates Framework is going to  have a high relevance (mainly due to the amount of resources directly compatible, like transcriptomics). Other reference framework relevant is the Waxholm (for rats and mouse). In case is needed we can calculate the conversion between the Paxinos and Allen and viceversa, from my previous lab in Spain I was working in this for Rats so count with my help if anyone is interested. 
+
+To facilitate the use of this 3D atlases I  let in our NAS a folder named resources > atlas.  There you can find: 
+
+
+- ITK-SNAP: A marvellous desktop tool that allow too load any kind of NIfti atlas (A format coming from MRI) and to load areas (annotations) and labels. I find it more easy to use that the Brain Explorer tool in order to get the coordinates. http://www.itksnap.org/pmwiki/pmwiki.php?n=Main.HomePage
+	1. Load the P56_ARA_v3.nii.gz
+	2. Load the annotation P56_ARA_v3_annotation.nii.gz
+	3. Import the labels p56_ARA_v3.label 
+
+![](ITK-A.png)
+If you have issues rendering the 3D model, click on Decimate mesh inside preferences. 
+
+- Brain Explorer 2: In case you need to consult the gene expression in some areas based on hibdridization in situ or you want to check afferents/efferents paths. https://mouse.brain-map.org/static/brainexplorer
+
+![](ITK-B.png)
+
+Have something in mind, the ARA (Allen Reference Atlas) is actually the 3th release so take this in account reading old papers or consulting databases. I saved the other versions in the atlas folder but labels creation require to use the python script (in tools). 
+
+Compatibility with Jupyter will come in the future. 
+
+
 #### Tensorflow
 
 Tensorflow is a library for machine learning.
