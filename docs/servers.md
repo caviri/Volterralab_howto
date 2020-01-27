@@ -30,7 +30,7 @@ To use the computer remotely go to "How to conect?" tutorial.
 - **Software**: Imaris 8.4.2/Matlab/ImageJ/LLastik/Blender
 - **Frequent users**: Barbara and Iaroslav
 
-### dnfvoltdatasrv3.ad.unil.ch (Not available yet)
+### 130.223.197.152
 We are going to configure a computing server based in Ubuntu. We are going to use it mainly for non-graphical computational tasks that will be send to the server through a password secured ssh connection using the slurm workload manager.
 
 
@@ -102,6 +102,26 @@ To access to the control panel is necesary to have an administration account and
 #### Known issues
 
 From time to time a backup fail appears. This must be consider normal if only happens sporadically.
+
+
+### NEW UNIL NAS
+
+This is the new NAS that we allocated. We will transfer all our data to this common NAS. 
+
+- D2c: Everything inside this folder is backup. We will work by now in this folder
+smb://nas.unil.ch/RECHERCHE/FAC/FBM/DNF/avolterr/default/D2c
+
+- LTS: Long Term Storage. For data archiving old datasets. See instructions because it requires specific description of the dataset structure. 
+smb://nas.unil.ch/RECHERCHE/FAC/FBM/DNF/avolterr/default/LTS
+
+We need to transfer at least 10TB to this NEW NAS from VOLTERRA NAS. So inside, D2c you can find two folders ‘data’, ‘projects' and ‘personal’. 
+	- data: In this folder is planned to be stored all raw data
+	- projects: In this folder is planned to be stored shortcuts to the raw data, analysis, results and documentation by project. 
+	- personal: In this folder we can find all our users folders where we can organise the middle files, shortcuts to the original files, personal code, etc. Please create a folder with your name. 
+	
+I propose to start using a more structured way of saving the data with compatibility with the Data Management Plans that will be requested  by UNIL in the future. That’s why we need to keep the original raw data in a separated folder organised by user and then technique. This will include even discarded recordings. An excel file with a list of the files needs to be included too. 
+
+Then the project folder will need to contain shortcuts to the data files/folders (to facilitate the use of graphical tools) and an excel file with information about the experiments needs to be included too ( to be used in automatic batch analysis). 
 
 ### UNIL NAS
 
