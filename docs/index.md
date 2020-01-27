@@ -2,9 +2,6 @@
 
 Here you will find all the relevant information regarding IT equipment, servers use, tools developed and much [ m](img/cat_comt.gif)ore.
 
-**Last Update**: 25/03/2019
-**Last Author**: Carlos Vivar
-
 ![](img/astro.gif)
 
 ## Lastupdates (Changelog)
