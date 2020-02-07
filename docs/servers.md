@@ -293,3 +293,23 @@ CADMOS is the Center for Advanced Modeling Science. It is a joint initiative bet
 ### Procedure to request access
 
 Alexandre must sent a requirement to the administrator of those servers that will give us access.
+
+## PROBLEMS
+
+Just a list of problems and how to we solved it. 
+
+### 7/02/2020
+
+#### NVIDIA CUDA PROBLEM
+
+I was trying to update the system of the linux machine and there was this error. 
+
+```
+trying to overwrite '/usr/lib/x86_64-linux-gnu/libGLX_indirect.so.0', which is also in package libglx-mesa0:amd64 19.0.8-0ubuntu0~18.04.2
+```
+
+I solved thanks to this webpage: https://askubuntu.com/questions/1131195/how-to-address-apt-upgrade-problem-involving-libglx-mesa0-and-nvidia-driver
+
+```
+sudo apt-get -o Dpkg::Options::="--force-overwrite" install --fix-broken
+```
