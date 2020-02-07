@@ -328,3 +328,10 @@ E: Unmet dependencies. Try 'apt --fix-broken install' with no packages (or speci
 ```
 
 I just repeated `update` and `apt-get install` and then `sudo apt-get dist-upgrade`
+
+#### Non color on login shell for jhub user on linux server
+
+From here:https://unix.stackexchange.com/questions/332531/why-does-remote-bash-source-bash-profile-instead-of-bashrc
+> A login shell first reads /etc/profile and then ~/.bash_profile.
+
+> A non-login shell reads from /etc/bash.bashrc and then ~/.bashrc.
