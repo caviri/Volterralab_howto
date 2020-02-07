@@ -313,3 +313,18 @@ I solved thanks to this webpage: https://askubuntu.com/questions/1131195/how-to-
 ```
 sudo apt-get -o Dpkg::Options::="--force-overwrite" install --fix-broken
 ```
+
+Another problem:
+
+```
+jhub@DNF32909:~$ sudo apt-get install
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+You might want to run 'apt --fix-broken install' to correct these.
+The following packages have unmet dependencies:
+ libglx-mesa0 : Depends: libglapi-mesa (= 19.0.8-0ubuntu0~18.04.2) but 19.2.8-0ubuntu0~18.04.2 is installed
+E: Unmet dependencies. Try 'apt --fix-broken install' with no packages (or specify a solution).
+```
+
+I just repeated `update` and `apt-get install` and then `sudo apt-get dist-upgrade`
