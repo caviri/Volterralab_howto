@@ -335,3 +335,17 @@ From here:https://unix.stackexchange.com/questions/332531/why-does-remote-bash-s
 > A login shell first reads /etc/profile and then ~/.bash_profile.
 
 > A non-login shell reads from /etc/bash.bashrc and then ~/.bashrc.
+
+#### Installing CUDA 10.1
+
+https://medium.com/@exesse/cuda-10-1-installation-on-ubuntu-18-04-lts-d04f89287130
+
+```
+sudo apt update
+sudo apt install cuda-10-1
+sudo apt install libcudnn7
+```
+
+
+
+
