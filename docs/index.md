@@ -10,6 +10,7 @@ Here you will find all the relevant information regarding IT equipment, servers 
 - **25/03/2019**: Introduced Iaroslav tutorials and Jupyter notebook.
 - **16/12/2019**: ITK-SNAP 3D ATLAS
 - **27/01/2020**: New NAS server
+- **09/03/2020**: Jupyter Local connection
 
 ## List of content
 
