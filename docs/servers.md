@@ -73,6 +73,19 @@ During the installation numerous problems appeared:
 
 The execution of the server must be done in root after doing a `sudo -s`. Is inside a tmux session that could be attached using `tmux attach-session -t jupyterhub`
 
+#### How to mount the jupyter on local? 
+
+If you want to have the jupyter folder in your local machine (useful for editing files or cheking the output). 
+
+On mac you need to install FUSE and then sshfs: 
+
+- https://osxfuse.github.io/ with compatibility layer option on. 
+- https://github.com/osxfuse/osxfuse/wiki/SSHFS
+
+```
+sudo sshfs -o allow_other,defer_permissions [USERNAME]@130.223.197.152:/ /YOUR/FOLDER
+```
+
 ### Relevant points
 
 The authorship of this points belongs to Y. Savchuk.
