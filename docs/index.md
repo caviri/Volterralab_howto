@@ -46,7 +46,9 @@ In the other hand the aim of this documentation is to unified the information ab
 - [Good enough practices in scientific computing](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510)
 - [Reproducible research in computational science](https://moodle.epfl.ch/pluginfile.php/1479581/mod_folder/content/0/Reproducible_Research_in_Computational_Science-Science-2011-Peng.pdf)
 
+## How to run this guide
 
+1. `mkdocs serve --dev-addr=0.0.0.0:80`
 
 ## Credits
 
