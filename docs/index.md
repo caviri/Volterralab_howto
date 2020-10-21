@@ -11,6 +11,8 @@ Here you will find all the relevant information regarding IT equipment, servers 
 - **16/12/2019**: ITK-SNAP 3D ATLAS
 - **27/01/2020**: New NAS server
 - **09/03/2020**: Jupyter Local connection
+- **21/10/2020**: Included information about custom envs for jhub and fixed some links
+
 
 ## List of content
 
