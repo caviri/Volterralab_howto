@@ -15,13 +15,13 @@ Here will be information about the scripts that Iaroslav developed for ImageJ an
 You can find a tutorial about Iaroslav's tools in this next videos:
 
 <video width="720" controls>
-  <source src="webm/001.webm" type="video/mp4">
+  <source src="/nas-fbm-av1/software/2019_Iaroslav's\ plugins\ video\ explanation/webm/001.webm" type="video/mp4">
 </video>
 
-- [Video 002](webm/002.webm)
-- [Video 003](/media/nas-fbm-av1/software/2019_Iaroslav's\ plugins\ video\ explanation/webm/003.webm)
-- [Video 004](/media/nas-fbm-av1/software/2019_Iaroslav's\ plugins\ video\ explanation/webm/004.webm)
-- [Video 005](/media/nas-fbm-av1/software/2019_Iaroslav's\ plugins\ video\ explanation/webm/005.webm)
+- [Video 002](/nas-fbm-av1/software/2019_Iaroslav's\ plugins\ video\ explanation/webm/002.webm)
+- [Video 003](/nas-fbm-av1/software/2019_Iaroslav's\ plugins\ video\ explanation/webm/003.webm)
+- [Video 004](/nas-fbm-av1/software/2019_Iaroslav's\ plugins\ video\ explanation/webm/004.webm)
+- [Video 005](/nas-fbm-av1/software/2019_Iaroslav's\ plugins\ video\ explanation/webm/005.webm)
 
 
 #### Batch-processing of acqusition stacks
@@ -125,12 +125,34 @@ To install jupyterlab first you need to have Python3 installed, we recommend the
 3. Install jupyterlab introducing this command: `conda install -c conda-forge jupyterlab`
 4. Open jupterlab in your broseer using this command: `jupyter lab`
 
+#### How to excecute Jupyter Hub?
+
+1. Use `sudo -s` 
+2. Go to `cd /etc/jupyterhub`
+3. `jupyterhub -f jupyterhub_config.py`
+
+#### How to include a custom kernel 
+
+1. create an environment using `conda create --name NAME python=3.7`
+2. In the environment: `conda install -c anaconda ipykernel`
+3. `conda activate base`
+4. `conda install -c conda-forge nb_conda_kernels`
+5. `python -m ipykernel install --name=test_env`
+
+### Use Tmux
+
+Tmux allows you to execute background shell sessions. 
+
+1. `tmux new -s myname`
+2. `tmux attach -t myname`
+3. To detach: control + b + d
+
 ### Imaris
 
 We are using actually two versions of IMARIS:
 
 - **IMARIS 8:** Belongs to the lab and is node-locked to **dnfvoltdatasrv2** using a network card's MAC address as the key. It could be use only on that computer but if we talk to the company could be transfered to other one. **(order ID: k7qy-mcsf-45gq-ed9p)**
-- **IMARIS 9+:** ⁠Using floating licenses belonging to DNF/UNIL. The availability of this licenses depends of the users number using at that time. This could be used in **dnfvoltdatasv1**.
+- **IMARIS 9+:** ⁠Using floating licenses belonging to DNF/UNIL. The availability of this licenses depends of the users number using at that time. This could be used in **dnfvoltdatasv1**. The IP for this Imaris license is: `2700@130.223.196.16` or `2705@130.223.196.16`.
 
 #### Imaris License Manager
 
