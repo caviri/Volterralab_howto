@@ -18,10 +18,10 @@ You can find a tutorial about Iaroslav's tools in this next videos:
   <source src="/nas-fbm-av1/Resources/software/2019_Iaroslav's\ plugins\ video\ explanation/webm/001.webm" type="video/mp4">
 </video>
 
-- [Video 002](/nas-fbm-av1/Resources/software/2019_Iaroslav's\ plugins\ video\ explanation/webm/002.webm)
-- [Video 003](/nas-fbm-av1/Resources/software/2019_Iaroslav's\ plugins\ video\ explanation/webm/003.webm)
-- [Video 004](/nas-fbm-av1/Resources/software/2019_Iaroslav's\ plugins\ video\ explanation/webm/004.webm)
-- [Video 005](/nas-fbm-av1/Resources/software/2019_Iaroslav's\ plugins\ video\ explanation/webm/005.webm)
+- [Video 002](/webm/002.webm)
+- [Video 003](/webm/003.webm)
+- [Video 004](/webm/004.webm)
+- [Video 005](/webm/005.webm)
 
 
 #### Batch-processing of acqusition stacks
