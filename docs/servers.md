@@ -359,6 +359,19 @@ sudo apt install cuda-10-1
 sudo apt install libcudnn7
 ```
 
+#### R on windows LC = failed
+
+It's needed to edit the Renviron based on this stackoverflow
+
+https://stackoverflow.com/questions/54102869/during-startup-warning-message-setting-lc-ctype-failed-on-windows
+
+```
+LC_COLLATE  = "English_United States.1252"
+LC_CTYPE    = "English_United States.1252"
+LC_MONETARY = "English_United States.1252"
+LC_NUMERIC  = "English_United States.1252"
+LC_TIME     = "English_United States.1252"
+```
 
 
 
