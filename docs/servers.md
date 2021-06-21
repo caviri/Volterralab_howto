@@ -102,6 +102,17 @@ The authorship of this points belongs to Y. Savchuk.
 10.	If you have old accounts on the dnfvoltdatasrv2 machine, these can still be used
 11.	The machines will be restarted weekly on Saturday nice in order to install the updates (on Sunday 1 AM, actually). If this is not OK for you (running computations, etc), we can postpone the shutdown manually: just get in touch.
 
+
+## Jupyter Hub in windows under docker. 
+
+In order to run the docker machine the following command should be run on the terminal. 
+
+```
+docker run --priviledged -p 130.223.196.101:8080:8080 -v /var/run/docker.sock:/var/run/docker.sock -v jupyterhub_data:/data mltooling/ml-hub:latest
+```
+
+Right now this is not working anymore in server 1. A new installation is required: https://github.com/ml-tooling/ml-hub
+
 ## NAS storage
 
 The lab counts with various NAS that offers storage.
