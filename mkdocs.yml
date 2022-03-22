@@ -9,6 +9,7 @@ pages:
     - Home: index.md
     - "Computing": servers.md
     - "Software": software.md
+    - "Database": database.md
     - "LS Analysis": Linescan_analysis.md
     - "3D segmentation": 3dsegmentation.md
     - "F.A.Q.": faq.md
